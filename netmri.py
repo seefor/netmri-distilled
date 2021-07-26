@@ -24,7 +24,6 @@ def netmri():
     for device in devices['infra_devices']:
         id =device['DeviceID']
         sn = c.api_request(f'infra_devices/chassis_serial_number?id={id}', {'limit': 1})
-        #print(device['DeviceName'], sn['chassis_serial_number'], device['DeviceVersion'])
         x+=1
         inventory[x]={}
         inventory[x]['id'] = device['DeviceID']
