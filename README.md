@@ -23,7 +23,7 @@ Basic NetMRI UI written in python3, using Flask and HTML(jinja2) templates
 ### Before starting the Flask APP
 You will need to edit the `config.ini` file to add your NetMRI URL, 
 > [netmri]  
-> url = 192.168.0.200 
+> url = 192.168.0.200  
 > user = admin  
 > passwrod = infoblox
 
