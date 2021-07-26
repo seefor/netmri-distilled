@@ -25,7 +25,7 @@ You will need to edit the `config.ini` file to add your NetMRI URL,
 > [netmri]  
 > url = 192.168.0.200  
 > user = admin  
-> passwrod = infoblox
+> password = infoblox
 
 
 
