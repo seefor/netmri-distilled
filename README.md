@@ -5,7 +5,6 @@
 
 - [Quick start](#quick-start)
 - [Creators](#creators)
-- [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
 
 
