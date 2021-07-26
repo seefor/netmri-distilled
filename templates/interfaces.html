@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h1>{% block title %}{{devicename}} -<small class="text-muted">Interfaces</small>{% endblock %}         <button type="button" class="btn btn-primary">
+            Total Ports =   <span class="badge badge-light">{{total['interfaces_count']}}</span>
+        </button>    </h1>  
+        <button type="button" class="btn btn-success">
+            up/up =  <span class="badge badge-light">{{total['admin_up_oper_up_count']}}</span>
+        </button>
+        <button type="button" class="btn btn-danger">
+            up/down =  <span class="badge badge-light">{{total['admin_up_oper_down_count']}}</span>
+        </button>
+        <button type="button" class="btn btn-info">
+            down/down =  <span class="badge badge-light">{{total['admin_down_oper_down_count']}}</span>
+        </button> 
+    </div>
+
+  </div>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Trunked Status
+            </th>
+            <th>
+                Admin and Op Status
+            </th>
+        </tr>
+    </thead>
+    <tbody .table-hover>
+        {% for post in posts['interfaces'] %}
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+            {{ post['ifName'] }}
+            </td>
+            <td>
+                {{ post['ifDescr'] }}
+            </td>
+            <td>
+                {{ post['ifTrunkStatus'] }}
+
+            </td>
+            <td>
+                    {% if post['ifAdminStatus'] == 'up' and post['ifOperStatus'] == 'up' %}
+                    <span class="badge badge-pill badge-success">
+                    {{ post['ifAdminStatus']}} / {{post['ifOperStatus']}}
+                    </span>
+                    {% elif post['ifAdminStatus'] == 'up' and post['ifOperStatus'] == 'down' %}
+                    <span class="badge badge-pill badge-danger">
+                        {{ post['ifAdminStatus']}} / {{post['ifOperStatus']}}
+                    </span>
+                    {%- else -%}
+                    <span class="badge badge-pill badge-info">
+                        {{ post['ifAdminStatus']}} / {{post['ifOperStatus']}}
+                    </span>
+                    {% endif %}
+            </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

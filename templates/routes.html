@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{% block title %}{{devicename}} -<small class="text-muted">Route Table</small>{% endblock %}</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                IP Address
+            </th>
+            <th>
+                Model
+            </th>
+            <th>
+                OS Version
+            </th>
+        </tr>
+    </thead>
+    <tbody .table-hover>
+        {% for post in posts['device_routes'] %}
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+            <a href="/interfaces/{{ post['DeviceID'] }}">{{ post['RouteCIDR'] }}</a>
+            </td>
+            <td>
+                {{ post['RouteNextHopIPDotted'] }}
+            </td>
+            <td>
+                {{ post['RouteProto'] }}
+
+            </td>
+            <td>
+                Test
+            </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

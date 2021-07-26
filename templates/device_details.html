@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ devicename }} <small class="text-muted">Current Running Config</small></h1>
+
+<table class="table">
+    <tbody .table-hover>
+        <tr>
+            <td>
+            <pre>{{ posts['running_config_text'] }}</pre></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
