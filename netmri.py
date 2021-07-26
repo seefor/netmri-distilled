@@ -64,7 +64,5 @@ def get_routes_details(ipspace):
     return render_template('routes.html', posts=config, devicename=devicename)
 
 
-#http://192.168.0.201/api/3.8/interfaces/find?op_DeviceID==&val_c_DeviceID=83
-
 if __name__ == "__main__":
     app.run(debug=True)
