@@ -31,9 +31,9 @@ You will need to edit the `config.ini` file to add your NetMRI URL,
 
 ## What's included
 ![1](/img/1.png)
-![2](/seefor/netmri-distilled/main/img/2.png)
-![3](/seefor/netmri-distilled/main/img/3.png)
-![4](/seefor/netmri-distilled/main/img/4.png)
+![2](/img/2.png)
+![3](/img/3.png)
+![4](/img/4.png)
 
 
 ## Creators
